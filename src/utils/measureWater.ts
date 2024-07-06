@@ -1,3 +1,6 @@
+/**
+ * Calculate the greatest common divisor (GCD) of two numbers.
+ */
 const gcd = (a: number, b: number): number => {
   while (b !== 0) {
     const temp = b;
@@ -7,16 +10,24 @@ const gcd = (a: number, b: number): number => {
   return a;
 };
 
+/**
+ * Check if it's possible to measure exactly z gallons using jugs of size x and y.
+ */
 const canMeasure = (x: number, y: number, z: number): boolean => {
   return z % gcd(x, y) === 0 && z <= Math.max(x, y);
 };
 
-interface State {
+
+interface JugState {
   a: number;
   b: number;
   path: string[];
 }
 
+/**
+ * Measure exactly z gallons using jugs of size x and y.
+ * Returns an array of steps to achieve the measurement.
+ */
 const measureWater = (x: number, y: number, z: number): string[] => {
   if (!canMeasure(x, y, z)) {
     return ["No Solution"];
@@ -24,13 +35,13 @@ const measureWater = (x: number, y: number, z: number): string[] => {
 
   const bfs = (x: number, y: number, z: number): string[] => {
     const visited = new Set<string>();
-    const queue: State[] = [];
-    const initialState: State = { a: 0, b: 0, path: [] };
+    const queue: JugState[] = [];
+    const initialState: JugState = { a: 0, b: 0, path: [] };
     queue.push(initialState);
     visited.add(`0,0`);
 
     while (queue.length > 0) {
-      const { a, b, path } = queue.shift() as State;
+      const { a, b, path } = queue.shift() as JugState;
 
       if (a === z || b === z) {
         return path;

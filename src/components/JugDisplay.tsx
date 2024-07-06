@@ -1,3 +1,5 @@
+import "../styles/JugDisplay.css";
+
 interface JugDisplayProps {
   jugX: number;
   jugY: number;
@@ -5,7 +7,7 @@ interface JugDisplayProps {
 
 const JugDisplay: React.FC<JugDisplayProps> = ({ jugX, jugY }) => {
   return (
-    <div>
+    <div className="jug-display">
       <h2>Jug States</h2>
       <p>Jug X: {jugX}</p>
       <p>Jug Y: {jugY}</p>

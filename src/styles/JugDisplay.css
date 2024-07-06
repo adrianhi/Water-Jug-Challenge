@@ -1,0 +1,13 @@
+.jug-display {
+  text-align: center;
+  margin: 20px;
+}
+
+.jug-display h2 {
+  margin-bottom: 10px;
+}
+
+.jug-display p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}

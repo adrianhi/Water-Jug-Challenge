@@ -1,0 +1,24 @@
+.steps-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.steps-table th,
+.steps-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.steps-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.steps-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.steps-table tr td:last-child {
+  font-weight: bold;
+}

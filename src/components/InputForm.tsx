@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import "../styles/InputForm.css";
 
+import { useState } from "react";
 interface InputFormProps {
   onSubmit: (values: { x: number; y: number; z: number }) => void;
 }
@@ -15,7 +16,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-container" onSubmit={handleSubmit}>
       <div>
         <label>
           Jug X Capacity:

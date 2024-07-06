@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+#Water Jug
+This project implements the classic Water Jug Challenge using React and TypeScript. The challenge involves using two jugs with different capacities to measure an exact amount of water. The application provides an interface for inputting jug capacities and the target amount, and displays the steps required to achieve the goal.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- User can input jug capacities and target amount.
+- Displays the state of each jug after each step.
+- Shows steps in a table format for better readability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
 
-## Expanding the ESLint configuration
+   ```sh
+   git clone https://github.com/adrianhi/Water-Jug-Challenge.git
+   ```
+   Then open the directory
+2.Install dependencies:   
+  npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#Usage  
+1.Open the application in your browser (usually at http://localhost:5173/).
+2.Enter the capacities of Jug X and Jug Y, and the target amount.
+3.Click the "Submit" button to see the steps required to measure the exact amount of water.
 
-- Configure the top-level `parserOptions` property like this:
+#Components
+InputForm
+  This component handles user input for jug capacities and the target amount.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+JugDisplay
+  This component displays the current state of the jugs.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+StepsTable
+  This component displays the steps required to measure the target amount in a table format.
+
+#Testing
+To run the tests, use the following command:
+npm test
